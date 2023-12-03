@@ -1,0 +1,7 @@
+
+I would like you to do some advanced reading about Javascript via the link below:
+
+https://javascript.info/getting-started
+https://javascript.info/first-steps
+https://javascript.info/code-quality
+

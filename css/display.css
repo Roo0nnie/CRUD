@@ -1,0 +1,32 @@
+:root {
+    --background_color_black:#000;
+    --background_color_white:#fff;
+    --background_color_main:#eeaf0a;
+    --background_color_sub-main: #363636;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: url(/Web_Dev/assets/9.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#title {
+    text-align: center;
+    font-size: 3rem;
+    padding: .5rem;
+    color: var(--background_color_main);
+}
+.htitle {
+    background-color: var(--background_color_main);   
+}
+.tdata {
+    color: var(--background_color_white);
+}

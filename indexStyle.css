@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+min-height: 100vh;
+background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+.container {
+    display: flex;
+  
+    justify-content: center;
+}
+.button-result {
+    text-align: center;
+    margin-top: 1rem;
+}
+:has(#act-1,#act-2,#act-3) {
+    margin-top: 1rem;
+}
+p {
+  text-align: center;
+  margin-block: 1rem;  
+  background-color:#E9E9E9;
+  padding-block: 10px;
+}
+img {
+    height: 100px;
+}
+.act-3 {
+    text-align: center;
+}
+.picture-wrap {
+    display: flex;
+    align-items: center;
+    margin-inline: 5rem;
+    position: relative;
+}
+
+input {
+    border-radius: 5px;
+    height: 30px;
+    border: none;
+    background-color: #E9E9E9;
+    padding-inline: 1rem;
+    padding-block: 20px;
+}
+input:focus {
+    background-color:  #beb9b9;
+    outline: none;
+    box-shadow: inset 0 0 0.5em 0 var(--background_color_black),
+    0 0 0.5em 0 var(--background_color_black);
+}
+button {
+    background-color: var(--background_color_black);
+    box-shadow: none;
+    color: var(--background_color_white);
+    padding-inline: 1rem;
+    transition: .3s ease-in-out;
+    padding-inline: 1rem;
+    padding-block: 10px;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #4e4e4e;
+    cursor: pointer;
+    color: #E9E9E9;
+}
+
+
+
+
+/*  */
+          
+if (isset($_POST['solve'])) ?> <?php { ?>
+    <?php
+                        if (!$_POST['num1'] || is_null($_POST['num1'])) {
+    ?>
+        <script>
+            var add_sum = <?php echo $_POST['num2'] ?>;
+            alert(add_sum);
+        </script>
+    <?php
+                        } else if (!$_POST['num2'] || is_null($_POST['num2'])) {
+    ?>
+        <script>
+            var add_sum = <?php echo $_POST['num1'] ?>;
+            alert(add_sum);
+        </script>
+    <?php
+                        } else {
+                            $num1 = $_POST['num1'];
+                            $num2 = $_POST['num2'];
+                            $sum = $num1 + $num2;
+                            ?>
+                            <script>
+                                var add_sum = <?php echo $sum ?>;
+                                alert(add_sum);
+                            </script>
+                            <?php
+    ?>
+        <script>
+            var sum = <?php echo $sum ?>;
+            document.getElementById('sum').innerHTML =  sum ;
+        </script>
+<?php
+                        }
+                    }
+?>
